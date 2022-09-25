@@ -8,12 +8,11 @@ function addWithInput() {
 function deleteExperience(id:number) {
   let index = 0;
   Object.keys(store.experiences).forEach((i) => {
-    if (parseInt(i, 10) === id) {
+    if (store.experiences[parseInt(i, 10)].id === id) {
       index = parseInt(i, 10);
     }
   });
   store.experiences.splice(index, 1);
-  store.removeLastId();
 }
 </script>
 <template>
@@ -46,7 +45,6 @@ function deleteExperience(id:number) {
           <div>
             <div mt-5 v-for="experience in store.experiences" :key="experience.id">
               <div class="bg-gray-300 p-3 rounded-md mb-2 flex flex-col">
-                {{experience.id}}
                 <label for = 'fromYear'>
                   <input type="text" id="fromYear" placeholder="From"
                   v-model="experience.from" class="rounded-md p-1 w-full mt-3">

@@ -43,15 +43,12 @@ export const useInfoStore = defineStore('info', () => {
     degree: ref('PHD in The Science Of Coolness'),
     location: ref('Cool University'),
   }]);
-  function removeLastId() {
-    id -= 1;
-  }
   const personalInfo = ref({
     address: ref(''),
     phone: ref(),
     email: ref(''),
   });
   return {
-    generalInfo, experiences, education, personalInfo, createExperience, removeLastId,
+    generalInfo, experiences, education, personalInfo, createExperience,
   };
 });
