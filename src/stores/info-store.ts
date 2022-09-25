@@ -7,7 +7,16 @@ export const useInfoStore = defineStore('info', () => {
   const lastName = ref('');
   const jobTitle = ref('');
   const description = ref('');
+  const experiences = ref([{
+    from: 'From',
+    to: 'To',
+    id: 1,
+    title: 'Teacher',
+    location: '1234 Test Lane',
+    description: 'I was a teacher here',
+  },
+  ]);
   return {
-    firstName, lastName, jobTitle, description,
+    firstName, lastName, jobTitle, description, experiences,
   };
 });

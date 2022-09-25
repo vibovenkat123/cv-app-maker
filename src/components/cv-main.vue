@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { useInfoStore } from '@/stores/info-store';
+import ExperienceItem from './experience-items.vue';
 
 const store = useInfoStore();
 function example() {
@@ -23,11 +24,21 @@ example();
       </div>
       <div class="bg-gray-100 p-2 rounded-b-md">
         <div class="flex flex-col">
-        <div class="text-xl">
-          General info:
-        </div>
-        <div class="text-lg">
-          {{store.description}}
+          <div>
+            <div class="text-xl mb-0.5">
+              About Me
+            </div>
+            <div class="bg-teal-500 w-24 h-0.5"></div>
+            <div class="text-lg">
+              {{store.description}}
+            </div>
+          </div>
+        <div>
+          <div class="text-xl mb-0.5 mt-2">
+            Work Experience
+          </div>
+          <div class="bg-teal-500 w-40 h-0.5"></div>
+          <ExperienceItem/>
         </div>
       </div>
       </div>
