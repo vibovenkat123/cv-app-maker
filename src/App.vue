@@ -1,4 +1,10 @@
-<script></script>
+<script lang="ts" setup>
+import CvMain from './components/cv-main.vue';
+import InputMain from './components/input-main.vue';
+</script>
 <template>
-  <h1 class="text-3xl">header</h1>
+  <div class="flex">
+    <InputMain/>
+    <CvMain></CvMain>
+  </div>
 </template>
