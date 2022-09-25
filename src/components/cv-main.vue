@@ -6,13 +6,14 @@ function example() {
   store.firstName = 'John';
   store.lastName = 'Smith';
   store.jobTitle = 'Teacher';
+  store.description = 'I am a teacher, I am very cool 😎';
 }
 example();
 </script>
 <template>
   <div class="p-6 w-full">
-    <div class="bg-gray-100 flex flex-col rounded-md w-full">
-      <div class = "bg-teal-500 w-full h-24 p-3 flex flex-col items-center">
+      <div class="flex flex-col w-full">
+      <div class = "bg-teal-500 w-full h-24 p-3 flex flex-col items-center rounded-t-md">
         <div class="text-white text-3xl">
           {{`${store.firstName} ${store.lastName}`}}
         </div>
@@ -20,10 +21,16 @@ example();
           {{store.jobTitle}}
         </div>
       </div>
-      <div >
-        General info
+      <div class="bg-gray-100 p-2 rounded-b-md">
+        <div class="flex flex-col">
+        <div class="text-xl">
+          General info:
+        </div>
+        <div class="text-lg">
+          {{store.description}}
+        </div>
+      </div>
       </div>
     </div>
-  </div>
-
+    </div>
 </template>

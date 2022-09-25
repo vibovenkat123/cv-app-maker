@@ -6,5 +6,8 @@ export const useInfoStore = defineStore('info', () => {
   const firstName = ref('');
   const lastName = ref('');
   const jobTitle = ref('');
-  return { firstName, lastName, jobTitle };
+  const description = ref('');
+  return {
+    firstName, lastName, jobTitle, description,
+  };
 });
