@@ -3,22 +3,39 @@ import { defineStore } from 'pinia';
 import { ref } from 'vue';
 
 export const useInfoStore = defineStore('info', () => {
+  let id = 0;
   const generalInfo = ref({
     firstName: ref(''),
     lastName: ref(''),
     jobTitle: ref(''),
     description: ref(''),
   });
-  const id = ref(0);
   const experiences = ref([{
     from: ref('From'),
     to: ref('To'),
     id,
-    title: ref('Teacher'),
-    location: ref('1234 Test Lane'),
-    description: ref('I was a teacher here'),
+    title: ref('Job Title'),
+    location: ref('Location'),
+    description: ref('Short Description'),
   },
   ]);
+  function createExperience(
+    from:string,
+    to:string,
+    title:string,
+    location:string,
+    description:string,
+  ) {
+    id += 1;
+    experiences.value.push({
+      from,
+      to,
+      id,
+      title,
+      location,
+      description,
+    });
+  }
   const education = ref([{
     from: ref('From'),
     to: ref('To'),
@@ -26,12 +43,15 @@ export const useInfoStore = defineStore('info', () => {
     degree: ref('PHD in The Science Of Coolness'),
     location: ref('Cool University'),
   }]);
+  function removeLastId() {
+    id -= 1;
+  }
   const personalInfo = ref({
     address: ref(''),
     phone: ref(),
     email: ref(''),
   });
   return {
-    generalInfo, experiences, education, personalInfo,
+    generalInfo, experiences, education, personalInfo, createExperience, removeLastId,
   };
 });
