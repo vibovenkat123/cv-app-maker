@@ -3,7 +3,7 @@ import { useInfoStore } from '@/stores/info-store';
 
 const store = useInfoStore();
 function addWithInput() {
-  store.createExperience('', '', '', '', '');
+  store.createExperience('From', 'To', 'Job Title', 'Location', 'Short Description');
 }
 function deleteExperience(id:number) {
   let index = 0;
@@ -24,7 +24,7 @@ function deleteEducation(id:number) {
   store.education.splice(index, 1);
 }
 function addEducation() {
-  store.createEducation('', '', '', '');
+  store.createEducation('From', 'To', 'Degree', 'Name of schol');
 }
 </script>
 <template>
@@ -106,7 +106,7 @@ function addEducation() {
                   v-model="education.to" class="rounded-md p-1 w-full mt-3">
                 </label>
                 <label for="jobTitile">
-                  <input type="text" id="jobTitle" placeholder="Job Title"
+                  <input type="text" id="jobTitle" placeholder="Degree"
                   v-model="education.degree" class="rounded-md p-1 w-full mt-3">
                 </label>
                 <label for="location">

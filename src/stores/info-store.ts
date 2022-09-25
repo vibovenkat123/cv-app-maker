@@ -40,8 +40,8 @@ export const useInfoStore = defineStore('info', () => {
     from: ref('From'),
     to: ref('To'),
     id,
-    degree: ref('PHD in The Science Of Coolness'),
-    location: ref('Cool University'),
+    degree: ref('Degree'),
+    location: ref('Name of school'),
   }]);
   const personalInfo = ref({
     address: ref(''),
