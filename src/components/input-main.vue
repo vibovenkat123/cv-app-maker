@@ -35,22 +35,25 @@ function addEducation() {
       <form>
         <div class="flex flex-col">
           General Info
-          <label for = 'firstName' class="mt-3">
-            <input type="text" id="firstName" placeholder="First Name"
-            v-model="store.generalInfo.firstName" class="rounded-md p-1 w-full">
-          </label>
-          <label for="lastName" class="mt-3">
-            <input type="text" id="lastName" placeholder="Last Name"
-            v-model="store.generalInfo.lastName" class="rounded-md p-1 w-full">
-          </label>
-          <label for="jobTitile" class="mt-3">
-            <input type="text" id="jobTitle" placeholder="Job Title"
-            v-model="store.generalInfo.jobTitle" class="rounded-md p-1 w-full">
-          </label>
-          <label for="description" class="mt-3">
-            <textarea type="text" id="description" placeholder="Description"
-            v-model="store.generalInfo.description" class="rounded-md p-1 w-full break-auto"/>
-          </label>
+          <div class="bg-gray-300 p-3 rounded-md">
+            <label for = 'firstName'>
+              <input type="text" id="firstName" placeholder="First Name"
+              v-model="store.generalInfo.firstName" class="rounded-md p-1 w-full mt-3">
+            </label>
+            <label for="lastName" class="mt-3">
+              <input type="text" id="lastName" placeholder="Last Name"
+              v-model="store.generalInfo.lastName" class="rounded-md p-1 w-full mt-3">
+            </label>
+            <label for="jobTitile" class="mt-3">
+              <input type="text" id="jobTitle" placeholder="Job Title"
+              v-model="store.generalInfo.jobTitle" class="rounded-md p-1 w-full mt-3">
+            </label>
+            <label for="description" class="mt-3">
+              <textarea type="text" id="description" placeholder="Description"
+              v-model="store.generalInfo.description" class="rounded-md p-1 w-full break-auto
+              mt-3"/>
+            </label>
+          </div>
         </div>
         <div class="flex flex-col">
           Work Experience(s)
@@ -126,6 +129,30 @@ function addEducation() {
             <span class="bg-teal-500 material-symbols-outlined w-1/4 rounded-md text-white">
               add
             </span></button>
+        </div>
+        <div class="flex flex-col">
+          <div class="bg-gray-300 rounded-md p-3">
+            <label for="Email">
+              <input type="email" name="" id="Email" placeholder="Email"
+              class="rounded-md p-1 w-full mt-3
+              valid:bg-green-400
+               invalid:bg-red-500 invalid:text-white" pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+                v-model="store.personalInfo.email">
+            </label>
+            <label for="Phone">
+              <input type="tel" name="" id="Phone" placeholder="Phone"
+              pattern=
+              "^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$"
+              class="rounded-md p-1 w-full mt-3 valid:bg-green-400
+              invalid:bg-red-500 invalid:text-white"
+              v-model="store.personalInfo.phone">
+            </label>
+            <label for="Address">
+              <input type="text" name="" id="Address" placeholder="Address"
+              class="rounded-md p-1 w-full mt-3"
+              v-model="store.personalInfo.address">
+            </label>
+          </div>
         </div>
       </form>
     </div>
