@@ -6,7 +6,6 @@ export const useInfoStore = defineStore('info', () => {
   const generalInfo = ref({
     firstName: ref(''),
     lastName: ref(''),
-    location: ref(''),
     jobTitle: ref(''),
     description: ref(''),
   });
@@ -28,10 +27,9 @@ export const useInfoStore = defineStore('info', () => {
     location: ref('Cool University'),
   }]);
   const personalInfo = ref({
-    address: ref(),
-    street: ref('Cool People Dr'),
-    phone: ref(487555980),
-    email: ref('john.smith@gmail.com'),
+    address: ref(''),
+    phone: ref(),
+    email: ref(''),
   });
   return {
     generalInfo, experiences, education, personalInfo,
