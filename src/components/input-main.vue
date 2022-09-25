@@ -1,5 +1,5 @@
 <template>
-  <div class="w-1/2">
+  <div class="w-3/4">
     filler
   </div>
 </template>
