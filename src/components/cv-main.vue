@@ -4,16 +4,14 @@ import ExperienceItem from './experience-items.vue';
 import EducationItems from './education-items.vue';
 
 const store = useInfoStore();
-function example() {
+function start() {
   store.generalInfo.firstName = 'John';
   store.generalInfo.lastName = 'Smith';
   store.generalInfo.jobTitle = 'Teacher';
-  store.generalInfo.description = 'I am a teacher, I am very cool 😎';
-  store.personalInfo.address = '1234 Edit Me Dr.';
-  store.personalInfo.phone = 487555980;
-  store.personalInfo.email = 'john.smith@gmail.com';
+  store.generalInfo.description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Convallis aenean et tortor at. Neque vitae tempus quam pellentesque nec. Fermentum leo vel orci porta. Sed blandit libero volutpat sed cras ornare arcu dui. Aliquam id diam maecenas ultricies mi eget mauris. Non odio euismod lacinia at quis risus sed vulputate. Varius duis at consectetur lorem donec massa sapien faucibus et. Amet risus nullam eget felis. Nunc mi ipsum faucibus vitae. Egestas egestas fringilla phasellus faucibus scelerisque. In iaculis nunc sed augue lacus viverra vitae congue. Elit eget gravida cum sociis natoque penatibus et. Nullam ac tortor vitae purus.';
 }
-example();
+console.log(typeof store.generalInfo.description);
+start();
 </script>
 <template>
   <div class="p-6 w-full">
@@ -34,7 +32,7 @@ example();
                 About Me
               </div>
               <div class="bg-teal-500 w-24 h-0.5"/>
-              <div class="text-lg">
+              <div class="text-lg italic">
                 {{store.generalInfo.description}}
               </div>
             </div>
