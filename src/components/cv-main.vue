@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { useInfoStore } from '@/stores/info-store';
 import ExperienceItem from './experience-items.vue';
+import EducationItems from './education-items.vue';
 
 const store = useInfoStore();
 function example() {
@@ -28,7 +29,7 @@ example();
             <div class="text-xl mb-0.5">
               About Me
             </div>
-            <div class="bg-teal-500 w-24 h-0.5"></div>
+            <div class="bg-teal-500 w-24 h-0.5"/>
             <div class="text-lg">
               {{store.description}}
             </div>
@@ -37,8 +38,15 @@ example();
           <div class="text-xl mb-0.5 mt-2">
             Work Experience
           </div>
-          <div class="bg-teal-500 w-40 h-0.5"></div>
+          <div class="bg-teal-500 w-40 h-0.5"/>
           <ExperienceItem/>
+        </div>
+        <div>
+          <div class="text-xl mb-0.5 mt-2">
+            Education
+          </div>
+          <div class="bg-teal-500 w-40 h-0.5"/>
+          <EducationItems/>
         </div>
       </div>
       </div>
