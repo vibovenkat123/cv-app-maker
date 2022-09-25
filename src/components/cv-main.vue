@@ -9,6 +9,9 @@ function example() {
   store.generalInfo.lastName = 'Smith';
   store.generalInfo.jobTitle = 'Teacher';
   store.generalInfo.description = 'I am a teacher, I am very cool 😎';
+  store.personalInfo.address = '1234 Edit Me Dr.';
+  store.personalInfo.phone = 487555980;
+  store.personalInfo.email = 'john.smith@gmail.com';
 }
 example();
 </script>
@@ -61,7 +64,7 @@ example();
           <a :href="`tel:${store.personalInfo.phone}`" class="break-words text-blue-500">
             {{store.personalInfo.phone}}</a>
             <span class="text-lg font-semibold">Address</span>
-          <a :href="`https://www.google.com/maps/search/${store.personalInfo.address}+${store.personalInfo.street}`" class="break-words text-blue-500" target="_blank">{{store.personalInfo.address}} {{store.personalInfo.street}}</a>
+          <a :href="`https://www.google.com/maps/search/${store.personalInfo.address}`" class="break-words text-blue-500" target="_blank">{{store.personalInfo.address}}</a>
         </div>
       </div>
     </div>
