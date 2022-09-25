@@ -1,9 +1,11 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 /* eslint-disable import/prefer-default-export */
 import { defineStore } from 'pinia';
-import { ref } from 'vue';
+import { ref, watch } from 'vue';
 
 export const useInfoStore = defineStore('info', () => {
   let id = 0;
+  const firstTime = !localStorage.getItem('generalInfo');
   const generalInfo = ref({
     firstName: ref(''),
     lastName: ref(''),
@@ -63,7 +65,47 @@ export const useInfoStore = defineStore('info', () => {
       location,
     });
   }
+  watch(
+    generalInfo,
+    (generalInfoVal) => {
+      localStorage.setItem('generalInfo', JSON.stringify(generalInfoVal));
+    },
+    { deep: true },
+  );
+  watch(
+    experiences,
+    (experienceVal) => {
+      localStorage.setItem('experiences', JSON.stringify(experienceVal));
+    },
+    { deep: true },
+  );
+  watch(
+    education,
+    (educationVal) => {
+      localStorage.setItem('education', JSON.stringify(educationVal));
+    },
+    { deep: true },
+  );
+  watch(
+    personalInfo,
+    (personalInfoVal) => {
+      localStorage.setItem('personalInfo', JSON.stringify(personalInfoVal));
+    },
+    { deep: true },
+  );
+  if (localStorage.getItem('generalInfo')) {
+    generalInfo.value = JSON.parse(localStorage.getItem('generalInfo')!);
+  }
+  if (localStorage.getItem('experiences')) {
+    experiences.value = JSON.parse(localStorage.getItem('experiences')!);
+  }
+  if (localStorage.getItem('education')) {
+    education.value = JSON.parse(localStorage.getItem('education')!);
+  }
+  if (localStorage.getItem('personalInfo')) {
+    personalInfo.value = JSON.parse(localStorage.getItem('personalInfo')!);
+  }
   return {
-    generalInfo, experiences, education, personalInfo, createExperience, createEducation,
+    generalInfo, experiences, education, personalInfo, createExperience, createEducation, firstTime,
   };
 });

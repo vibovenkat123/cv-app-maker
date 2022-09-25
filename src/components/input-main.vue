@@ -24,7 +24,7 @@ function deleteEducation(id:number) {
   store.education.splice(index, 1);
 }
 function addEducation() {
-  store.createEducation('From', 'To', 'Degree', 'Name of schol');
+  store.createEducation('From', 'To', 'Degree', 'Name of school');
 }
 </script>
 <template>

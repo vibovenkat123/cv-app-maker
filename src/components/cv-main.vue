@@ -8,10 +8,11 @@ function start() {
   store.generalInfo.firstName = 'John';
   store.generalInfo.lastName = 'Smith';
   store.generalInfo.jobTitle = 'Teacher';
-  store.generalInfo.description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Convallis aenean et tortor at. Neque vitae tempus quam pellentesque nec. Fermentum leo vel orci porta. Sed blandit libero volutpat sed cras ornare arcu dui. Aliquam id diam maecenas ultricies mi eget mauris. Non odio euismod lacinia at quis risus sed vulputate. Varius duis at consectetur lorem donec massa sapien faucibus et. Amet risus nullam eget felis. Nunc mi ipsum faucibus vitae. Egestas egestas fringilla phasellus faucibus scelerisque. In iaculis nunc sed augue lacus viverra vitae congue. Elit eget gravida cum sociis natoque penatibus et. Nullam ac tortor vitae purus.';
+  store.generalInfo.description = 'Abundantly evening, whose their don\'t beast greater deep hath she\'d subdue made make firmament fish fowl. Fish upon be. Night, can\'t shall sea don\'t their creature him don\'t divide. Gathered open evening two a firmament one greater fifth cattle void. Made set rule also, air called sixth own god after Don\'t which may that beginning darkness us subdue. Seas sixth Bring midst heaven shall them male replenish have fowl she\'d. Isn\'t made, heaven it grass appear, shall had in. Open may blessed given night whales life deep be, was dry image. Meat one the great morning seas to fifth. Can\'t.';
 }
-console.log(typeof store.generalInfo.description);
-start();
+if (store.firstTime) {
+  start();
+}
 </script>
 <template>
   <div class="p-6 w-1/2 fixed right-0">
