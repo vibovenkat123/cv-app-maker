@@ -61,7 +61,7 @@ example();
           <a :href="`tel:${store.personalInfo.phone}`" class="break-words text-blue-500">
             {{store.personalInfo.phone}}</a>
             <span class="text-lg font-semibold">Address</span>
-          <a :href="`https://www.google.com/maps/search/${store.personalInfo.address}+${store.personalInfo.street}`" class="break-words text-blue-500">{{store.personalInfo.address}} {{store.personalInfo.street}}</a>
+          <a :href="`https://www.google.com/maps/search/${store.personalInfo.address}+${store.personalInfo.street}`" class="break-words text-blue-500" target="_blank">{{store.personalInfo.address}} {{store.personalInfo.street}}</a>
         </div>
       </div>
     </div>
