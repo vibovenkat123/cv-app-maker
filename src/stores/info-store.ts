@@ -48,7 +48,22 @@ export const useInfoStore = defineStore('info', () => {
     phone: ref(),
     email: ref(''),
   });
+  function createEducation(
+    from:string,
+    to:string,
+    degree:string,
+    location:string,
+  ) {
+    id += 1;
+    education.value.push({
+      from,
+      to,
+      id,
+      degree,
+      location,
+    });
+  }
   return {
-    generalInfo, experiences, education, personalInfo, createExperience,
+    generalInfo, experiences, education, personalInfo, createExperience, createEducation,
   };
 });

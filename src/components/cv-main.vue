@@ -14,7 +14,7 @@ console.log(typeof store.generalInfo.description);
 start();
 </script>
 <template>
-  <div class="p-6 w-full">
+  <div class="p-6 w-1/2 fixed right-0">
       <div class="flex flex-col w-full">
       <div class = "bg-teal-500 w-full h-24 p-3 flex flex-col items-center rounded-t-md">
         <div class="text-white text-3xl">
