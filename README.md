@@ -1,6 +1,6 @@
 # cv-maker
 ## Live
-[Live Here]('https://vibovenkat123.github.io/cv-app-maker/')
+[Live Here](https://vibovenkat123.github.io/cv-app-maker)
 #### Project setup
 ```
 npm install
