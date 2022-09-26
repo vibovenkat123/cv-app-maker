@@ -30,7 +30,7 @@ function addEducation() {
 <template>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-  <div class="w-1/2 p-6">
+  <div class="xl:w-3/4 p-6 w-full">
     <div class="flex flex-col bg-gray-200 p-3 rounded-md">
       <form>
         <div class="flex flex-col">
@@ -155,6 +155,10 @@ function addEducation() {
           </div>
         </div>
       </form>
+      <div class="w-full flex justify-center">
+        <button type="button" class="relative xl:hidden mt-3 bg-teal-500 rounded-md
+       text-white p-5">Preview</button>
+      </div>
     </div>
   </div>
 </template>

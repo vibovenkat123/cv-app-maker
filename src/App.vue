@@ -6,7 +6,7 @@ import HeaderItem from './components/header-item.vue';
 <template>
   <div class="flex flex-col">
     <HeaderItem/>
-    <div class="flex">
+    <div class="flex-col flex xl:flex-row">
       <InputMain/>
       <CvMain></CvMain>
   </div>
