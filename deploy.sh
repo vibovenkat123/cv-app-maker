@@ -2,7 +2,10 @@
 
 # abort on errors
 set -e
-
+# minify css
+npx tailwindcss -o src/css/output/output.css --minify
+# remove unused directory
+rm -r src/css/input
 # build
 npm run build
 
