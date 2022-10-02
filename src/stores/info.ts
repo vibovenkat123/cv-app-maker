@@ -48,8 +48,7 @@ export function createExperience(
     }
   );
 }
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const education: any = writable([
+export const education : {from:string, to:string, id:number, degree:string, location:string}[] = writable([
   {
     from: "From",
     to: "To",
