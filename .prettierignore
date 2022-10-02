@@ -1,0 +1,4 @@
+dist
+src/css/output.css
+node_modules
+.svelte-kit
