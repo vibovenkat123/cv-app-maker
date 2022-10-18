@@ -15,3 +15,4 @@
 ## Technologies
 
 ### Frontend -> Typescript, Svelte, Sveltekit
+### Backend -> Vercel (hosting)
