@@ -5,9 +5,7 @@
 
 
 <h3 align="center"> 
-  <a href="https://cv-builder-blue.vercel.app/">Live Here</a>
-  <span> · </span>
-  <a href="https://vibovenkat123.github.io/cv-app-maker/">Vue (old) Version</a>
+  <a href="https://cv-builder.vaibhavvenkat.com/">Live Here</a>
 </h3>
 
 
